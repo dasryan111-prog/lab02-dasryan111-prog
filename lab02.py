@@ -22,13 +22,13 @@ def seconds_to_hms(total_seconds):
 def admission_price(age):
     # TODO (Part 2): return the ticket price (a number) for someone of this age
     if age < 5:
-        price = "0"
-    elif age > 4 and age < 13:
-        price = "8"
-    elif age > 12 and age < 65:
-        price = "12"
+        price = 0
+    elif age < 13:
+        price = 8
+    elif age < 65:
+        price = 15
     else:
-        price = "10"
+        price = 10
     return price
 
 
@@ -66,7 +66,6 @@ def sum_multiples(limit):
 def total_of_positives(numbers):
     # TODO (Part 4 - STRETCH, optional): return the sum of just the
     #   positive numbers in the list `numbers`
-    pass
     sum_pos = 0
     for i in range(len(numbers)):
         if int(numbers[i]) > 0:
@@ -83,10 +82,6 @@ def main():
     # print(admission_price(10))             # 8
     # print(sum_multiples(10))               # 23
     # print(total_of_positives([1, -2, 3]))  # 4
-    print(seconds_to_hms(3661))
-    print(admission_price(10))
-    print(sum_multiples(10))
-    print(total_of_positives([1,-2,3]))
     pass
 
 
